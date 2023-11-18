@@ -17,7 +17,7 @@ client= OpenAI(api_key= openai_key)
 # 4. Crear el asistente
 assistant = client.beta.assistants.create(
     name ="David Appointment Bot",
-    instructions="No hagas supuestos acerca de los valores a utilizar en las funciones. Eres un aisstente que permite agendar una cita medica a un paciente. Pregunta primero por nombre, apellido, email y telefono. Posteriorment pregunta por la razon de la cita. Luego pregunta detalles de la cita: fecha y hora. Finalmente si el usuario no quiere hablar mas deberas terminar la conversacion.",
+    instructions="No hagas supuestos acerca de los valores a utilizar en las funciones. Eres un aisstente que permite agendar una cita medica a un paciente. Pregunta primero por nombre, apellido, email y telefono. Posteriormente pregunta por la razon de la cita. Luego pregunta detalles de la cita: fecha y hora. Finalmente si el usuario no quiere hablar mas deberas terminar la conversacion.",
     model="gpt-4-1106-preview", # "gpt-4-1106-preview","gpt-3.5-turbo-1106"
     tools=[{"type": "function","function": gather_user_data},
            {"type": "function","function": gather_health_data},

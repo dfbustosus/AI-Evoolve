@@ -18,7 +18,7 @@ client= OpenAI(api_key= openai_key)
 print(gather_appointment_data)
 ###################################################
 # 4. Obtener el asistente creado el asistente
-assistant= client.beta.assistants.retrieve("asst_3kDSWYXG3BxWeiiibhXIclEC")
+assistant= client.beta.assistants.retrieve("asst_1ytHgoX0Xn1kUNPIJTIeP1i1")
 # 5. Conversacion
 stop = True
 # 5.1 crear un empty thread

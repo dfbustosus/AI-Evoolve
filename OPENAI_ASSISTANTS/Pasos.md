@@ -8,7 +8,7 @@ python -m venv myenv
 ```
 3. Instalar dependencias:
 ```cmd
-pip install r-r requirements.txt
+pip install -r requirements.txt
 ```
 4. Crear el archivo `Funciones.py` de acuerdo a lo que necesites
 5. Crear el archivo `.env` con la credencial de OPENAI e.g
