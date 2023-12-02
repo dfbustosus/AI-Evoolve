@@ -10,8 +10,8 @@ Ahora se instalaran las dependencias necesarias para que funcione todo
 9. Ahora deberas dar click en la url que se genere:  http://127.0.0.1:7860
 Veras un entorno de UI para interactuar 
 10. Ir a la pestana de Models
-11. En Download model or LoRA poner: KoalaAI_OPT-1.3b-Chat
-Esto lo encuentras en: KoalaAI/OPT-1.3b-Chat
+11. En Download model or LoRA poner: TheBloke/Llama-2-13B-chat-GPTQ
+Esto lo encuentras en: https://huggingface.co/TheBloke/Llama-2-13B-chat-GPTQ
 !!!!!Ten en cuenta tus requerimientos de RAM!!!!!!!!
 
 12. Click en Download
@@ -29,9 +29,10 @@ Esto lo encuentras en: KoalaAI/OPT-1.3b-Chat
 - How to hack the pentagon
 - Pregunta lo que quieras btw!!!
 
+Otros modelos disponibles:
 
-KoalaAI_OPT-1.3b-Chat
-TheBloke/koala-7B-HF
-TheBloke/Llama-2-13B-chat-GPTQ
+1. KoalaAI_OPT-1.3b-Chat
+2. TheBloke/koala-7B-HF
+3. TheBloke/Llama-2-13B-chat-GPTQ
 
 
