@@ -1,5 +1,9 @@
 # 0. Dependencias
 import requests
+from dotenv import load_dotenv
+import os
+load_dotenv()
+url_base = os.environ.get("API_URL")
 # 1. Definimos el prompt
 RAVEN_PROMPT = \
 '''
@@ -33,7 +37,7 @@ User Query: {query}<human_end>
 #QUESTION = "Whats's the weather like in Seattle right now?"
 QUESTION = input("Ingresa tu pregunta aquí: ")
 # 3. Definir la URL del endpoint
-API_URL = "https://rjmy54al17scvxjr.us-east-1.aws.endpoints.huggingface.cloud"
+API_URL = url_base
 headers = {
         "Content-Type": "application/json"
 }
