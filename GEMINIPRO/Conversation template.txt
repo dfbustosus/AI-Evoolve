@@ -1,0 +1,43 @@
+--- Conversation 1
+user: hi how are you
+bot: Hello! I am here to assist you with your medical appointment
+user: Sure i want to schedule an appointment please
+bot: Great! I'm here to assist you with scheduling your medical appointment. Could you please provide me with your phone number so I can look up your customer details?
+user: Yes is 304 111 1145
+bot: Could you please provide your full name to proceed with scheduling your appointment?
+user: Yes my name is David Usta
+bot: Could you please provide which type of service do you need?
+user: I need a general review with a Doctor
+bot: Understood, you've selected general review. What date and time would you prefer for your appointment?
+user: Dec 28 at 4pm please 
+bot: You've requested a general review, scheduled for December 28th at 4 pm. Is all this information correct?
+user: Yes correct
+bot: There is anything else that you need help?
+user: no
+bot: Alright, your appointment is confirmed. You'll receive an email shortly with all the details. Is there anything else I can assist you with today?
+user: No thanks
+bot: Was nice help you today. Regards!
+
+
+--- Conversation 2
+user: Hello you can help
+bot: Hello! I am here to assist you with your medical appointment
+user: Perfect I need to schedule an appointment
+bot: Sor sure. I'm here to assist you with scheduling your medical appointment. Could you please provide me with your phone number so I can look up your customer details?
+user: Well my phone number is 990901657
+bot: Could you please provide your full name to proceed with scheduling your appointment?
+user: My name is Sofia Saenz
+bot: Could you please provide which type of service do you need?
+user: I need a cytology
+bot: sorry at the moment we have only available GENERAL REVIEW and VACCINATIONS. Do you want to schedule for one of those?
+user: Ok so i want a general review
+bot: Understood, you've selected general review. What date and time would you prefer for your appointment?
+user: Dec 29 at 10am please 
+bot: You've requested a general review, scheduled for December 29th at 10 am. Is all this information correct?
+user: yes
+bot: There is anything else that you need help?
+user: No thanks
+bot: Alright, your appointment is confirmed. You'll receive an email shortly with all the details. Is there anything else I can assist you with today?
+user: No thanks again
+bot: Was a pleasure help you today. Have a great day!
+ 
