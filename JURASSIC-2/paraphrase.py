@@ -19,7 +19,7 @@ Short - express your messages clearly and concisely.
 Long - expand your sentences to give more detail, nuance and depth.
 """
 data = {
-    'style': 'general', # Hay diversos estilos 
+    'style': 'formal', # Hay diversos estilos 
     'text': input('Texto a resumir: ') # e.g  Hi I was wondering if you can help with my order please 
 }
 

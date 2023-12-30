@@ -1,0 +1,52 @@
+1. Tener instalado Anaconda y NVIDIA drivers
+2. Abrir anaconda prompt
+3. conda create --name myenv python=3.10.11
+4. conda activate myenv
+5. conda install pytorch torchvision torchaudio pytorch-cuda=11.8
+6. Instalar dependencias:
+pip install xformers
+pip install audiocraft
+pip install IPython
+
+7. Puedes crear un script con esto para verificar que tengas las dependencias:
+import torch
+print(torch.version.cuda)
+print(torch.cuda,is_available())
+
+8. Poner este code en tu carpeta de trabajo y correrlo
+-------------------------------------
+from IPython import display as ipd
+from audiocraft.models import musicgen
+from audiocraft.utils.notebook import display_audio
+import torch
+import torchaudio
+import os
+import warnings
+warnings.filterwarnings("ignore")
+# Definir output dir
+output_dir= r="./"
+
+model= musicgen.MusicGen.get_pretrained("medium", device="cuda")
+model.set_generation_params(duration=30)
+
+res= model.generate([
+    'crazy EDM, heavy bang', 
+    'classic reggae track with an electronic guitar solo',
+    'lofi slow bpm electro chill with organic samples',
+    'rock with saturated guitars, a heavy bass line and crazy drum break and fills.',
+    'earthy tones, environmentally conscious, ukulele-infused, harmonic, breezy, easygoing, organic instrumentation, gentle grooves',
+    ], progress=True)
+
+# Guardar los audio files
+
+for i, audio in enumerate(res):
+  audio_cpu= audio.cpu()
+  file_path= os.path.join(output_dir, f"audio_{i}.wav")
+  torchaudio.save(file_path, audio_cpu, smaple_rate=32000)
+
+# Display loas audio files
+for i in range(len(res)):
+	file_path= os.path.join(output_dir, f"audio_{i}.wav")
+	audio, sample_rate= torchaudio.load(file_path)
+	display_audio(audio,sample_rate= sample_rate)
+-------------------------------------
