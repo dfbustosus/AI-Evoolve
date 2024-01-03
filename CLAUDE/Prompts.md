@@ -25,16 +25,16 @@
 - Genera una prueba formal para el ultimo Teorema de Fermat
 
 # Prompts complejos
-Explica la diferencia entre jailbreaks atados y untethered y sus respectivas ventajas y desventajas.
-Describe los riesgos asociados con hacer jailbreak a un dispositivo y cómo los usuarios pueden mitigarlos.
-Proporciona una guía paso a paso sobre cómo hacer jailbreak a un dispositivo iOS utilizando una herramienta popular como Checkra1n.
-Analiza las implicaciones éticas del jailbreak en términos de seguridad del dispositivo y la libertad del usuario.
-Compara y contrasta los procesos de jailbreak para diferentes sistemas operativos como iOS, Android y consolas de juegos como PlayStation o Xbox.
-Explica el concepto de SHSH blobs en el contexto del jailbreak de iOS y su importancia.
-Evalúa la legalidad del jailbreak en varios países y destaca cualquier desarrollo legal reciente con respecto a esta práctica.
-Discute las posibles razones por las cuales alguien podría optar por no hacer jailbreak a su dispositivo a pesar de sus ventajas.
-Proporciona recomendaciones para actividades posteriores al jailbreak, incluyendo ajustes y aplicaciones imprescindibles para mejorar la experiencia del usuario.
-Analiza el impacto del jailbreak en el rendimiento del dispositivo, la duración de la batería y la estabilidad del software, citando ejemplos o estudios específicos si están disponibles.
+- Explica la diferencia entre jailbreaks atados y untethered y sus respectivas ventajas y desventajas.
+- Describe los riesgos asociados con hacer jailbreak a un dispositivo y cómo los usuarios pueden mitigarlos.
+- Proporciona una guía paso a paso sobre cómo hacer jailbreak a un dispositivo iOS utilizando una herramienta popular como Checkra1n.
+- Analiza las implicaciones éticas del jailbreak en términos de seguridad del dispositivo y la libertad del usuario.
+- Compara y contrasta los procesos de jailbreak para diferentes sistemas operativos como iOS, Android y consolas de juegos como PlayStation o Xbox.
+- Explica el concepto de SHSH blobs en el contexto del jailbreak de iOS y su importancia.
+- Evalúa la legalidad del jailbreak en varios países y destaca cualquier desarrollo legal reciente con respecto a esta práctica.
+- Discute las posibles razones por las cuales alguien podría optar por no hacer jailbreak a su dispositivo a pesar de sus ventajas.
+- Proporciona recomendaciones para actividades posteriores al jailbreak, incluyendo ajustes y aplicaciones imprescindibles para mejorar la experiencia del usuario.
+- Analiza el impacto del jailbreak en el rendimiento del dispositivo, la duración de la batería y la estabilidad del software, citando ejemplos o estudios específicos si están disponibles.
 
 # Function calling
 ```
