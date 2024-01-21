@@ -33,6 +33,11 @@ npm install dotenv openai readline-sync
 ```
 5. Definir el asistente para esto puedes utilizar el archivo en la siguiente url [Creacion de asistente](https://github.com/dfbustosus/AI-Evoolve/blob/main/OPENAI_ASSISTANTS/Creacion_asistente.py)
 6. Utilizar el `assistant_id` y la `apiKey` que tengas para que puedas utilizar tu asistente
+7. Crear el archivo `.env` con la siguiente estructura
+```bash
+OPENAI_KEY=sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ASSISTANT_ID=asst_XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+```
 7. Correr el proyecto con el comando
 ```bash
 node main.js

@@ -3,6 +3,7 @@ import * as dotenv from 'dotenv';
 import { OpenAI } from 'openai';
 import readlineSync from 'readline-sync';
 
+// 2. Cargar variables de env
 dotenv.config();
 const key = process.env.OPENAI_KEY;
 const id_assistant= process.env.ASSISTANT_ID;
@@ -11,6 +12,7 @@ if (!key) {
   process.exit(1);
 }
 
+// 3. Definir cliente y asistente
 const client = new OpenAI({apiKey: key});
 
 const assistant = await client.beta.assistants.retrieve(
@@ -18,28 +20,28 @@ const assistant = await client.beta.assistants.retrieve(
 );
 //console.log(assistant);
 
-// Crear un nuevo Thread
+// 4. Crear un nuevo Thread
 const thread = await client.beta.threads.create();
 //console.log(thread);
 
-// Loop de conversacion
+// 5. Loop de conversacion
 let stop = true;
 
 while (stop) {
-    // User input
+    // 5.1 User input
     const user_input= readlineSync.question('user: ');
-    // Agregar mensaje al assistant
+    // 5.2 Agregar mensaje al assistant
     const message = await client.beta.threads.messages.create(thread.id,{
         role: "user",
         content: user_input
     })
-    // Correr el asistente para obtener response
+    // 5.3 Correr el asistente para obtener response
     let run = await client.beta.threads.runs.create(thread.id,{
         //thread_id: thread.id,
         assistant_id: assistant.id
         // Opcional instructions: "Algo adicional que quiero que haga"
     })
-    // Obtener status de corrida
+    // 5.4 Obtener status de corrida
     let i =0;
     while (run.status !== "completed" && run.status !== "failed" && run.status !== "requires_action"){
         if (i>0){
@@ -49,13 +51,13 @@ while (stop) {
         i++;
     }
 
-    // Trabajar sobre requires_action status
+    // 5.5 Trabajar sobre requires_action status
     if (run.status == "requires_action"){
         const toolsToCalls = run.required_action.submit_tool_outputs.tool_calls;
         //console.log("-----------------------------");
         //console.log(toolsToCalls)
         //console.log("-----------------------------");
-        // Ejecutar la accion correspondiente
+        // 5.5.1 Ejecutar la accion correspondiente
         const toolOutputArray =[];
         for (const eachTool of toolsToCalls){
             const toolCallId = eachTool.id;
@@ -85,14 +87,14 @@ while (stop) {
             toolOutputArray.push({ tool_call_id: toolCallId, output });
             //console.log(toolOutputArray);
         }
-        // Retornar resultados
+        // 5.5.2 Retornar resultados
         //run = await client.beta.threads.runs.submit_tool_outputs(thread.id, run.id, toolOutputArray);
         //console.log("Entrando a error");
         const tool_outputs = toolOutputArray.map(({ tool_call_id, output }) => ({ tool_call_id, output }));
         //run = await client.beta.threads.runs.submitToolOutputs(thread.id, run.id, toolOutputArray);
         run = await client.beta.threads.runs.submitToolOutputs(thread.id, run.id, { tool_outputs });
         //console.log("Saliendo de error");
-        // Recheck the status again
+        // 5.5.3 Revisar el status de nuevo
         i = 0;
         while (run.status !== "completed" && run.status !== "failed" && run.status !== "requires_action") {
             if (i > 0) {
@@ -103,23 +105,22 @@ while (stop) {
           }
     }
 
-    // Obtener la respuesta del assistant
+    // 5.6 Obtener la respuesta del assistant
     //const messages = await openai.beta.threads.messages.list(thread.id);
     //const reversedMessages = messages.reverse();
     //console.log('Assistant:', reversedMessages[0].content[0].text.value);
     //
     const messagesResponse = await client.beta.threads.messages.list(thread.id);
     const messages = Array.isArray(messagesResponse.data) ? messagesResponse.data : [];
-    // Find the last assistant message in the array
+    // Encontrar utlima respuesta del array 
     const assistantMessage = messages.find(message => message.role === 'assistant');
-    // Log the assistant's answer
+    // Logear la respuesta del asistente
     if (assistantMessage) {
     console.log('Assistant:', assistantMessage.content[0].text.value);
     } else {
     console.log('No assistant response found.');
     }
-    // Guargar la lista final de mensajes 
-    // Save the final list of messages
+    // 5.7 Guargar la lista final de mensajes 
     if (!stop) {
         const listMessages = messages.map(each => ({ [each.role]: each.content[0].text.value }));
         console.log("===================================");
