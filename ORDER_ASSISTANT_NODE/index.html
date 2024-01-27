@@ -1,0 +1,113 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat con DavidBot</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 20px;
+      text-align: center;
+      color: #333; /* Default text color */
+    }
+
+    h1 {
+      color: #3498db;
+    }
+
+    #chatForm {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    label {
+      margin-right: 10px;
+      font-weight: bold;
+      color: #333; /* Label text color */
+    }
+
+    #user_input {
+      padding: 15px;
+      border: 1px solid #3498db;
+      border-radius: 5px;
+      flex: 1;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #response {
+      margin-top: 20px;
+      white-space: pre-line; /* Asegurar que \n es un line break */
+      font-weight: bold; /* Bold para el conversation log */
+      text-align: left; /* Left-align para el conversation log */
+    }
+
+    .user-log {
+      color: #3498db; /* User log text color */
+    }
+
+    .assistant-log {
+      color: #27ae60; /* Assistant log text color */
+    }
+
+    .log-entry {
+      margin-bottom: 8px; /* Add some space between successive messages */
+    }
+  </style>
+</head>
+<body>
+  <h1>Chat con DavidBot</h1>
+  <form id="chatForm" action="/submit" method="post">
+    <label for="user_input">User:</label>
+    <input type="text" id="user_input" name="user_input" required>
+    <button type="submit">Send</button>
+  </form>
+  <div id="response"></div>
+
+  <script>
+    const conversationLog = [];
+
+    document.getElementById('chatForm').addEventListener('submit', async function (event) {
+      event.preventDefault();
+
+      const userInput = document.getElementById('user_input').value;
+      const responseDiv = document.getElementById('response');
+
+      // Agregar el user message al conversation log
+      conversationLog.push({ role: 'user', content: userInput });
+
+      const response = await fetch('/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ user_input: userInput }),
+      }).then(res => res.json());
+
+      // Aadir el assistant message al conversation log
+      conversationLog.push({ role: 'assistant', content: response.response });
+
+      // Mostrar el conversation log de forma identada
+      const formattedLog = conversationLog.map(entry => {
+        const roleText = entry.role === 'user' ? 'User' : 'Assistant';
+        const logColor = entry.role === 'user' ? 'user-log' : 'assistant-log';
+        return `<div class="log-entry ${logColor}"><strong>${roleText}:</strong> ${entry.content}</div>`;
+      }).join('');
+
+      responseDiv.innerHTML = '<strong>Conversation Log:</strong>' + formattedLog;
+    });
+  </script>
+</body>
+</html>

@@ -16,4 +16,9 @@ JSONFORMER/
 GPT_CODE/.env
 ORDER_ASSISTANT/
 ORDER_ASSISTANT_NODE/.env
+ORDER_ASSISTANT_NODE/node_modules/
+ORDER_ASSISTANT_NODE/package-lock.json
+ORDER_ASSISTANT_NODE/package.json
 .vscode/
+ChatDev/ChatDev
+ChatDev/Test
