@@ -45,7 +45,7 @@ app.post('/submit', async (req, res) => {
   let i = 0;
   while (run.status !== 'completed' && run.status !== 'failed' && run.status !== 'requires_action') {
     if (i > 0) {
-      await new Promise(resolve => setTimeout(resolve, 100));
+      await new Promise(resolve => setTimeout(resolve, 1000)); // Esperar 1 seg
     }
     run = await client.beta.threads.runs.retrieve(thread.id, run.id);
     i++;
@@ -98,7 +98,7 @@ app.post('/submit', async (req, res) => {
         i = 0;
         while (run.status !== "completed" && run.status !== "failed" && run.status !== "requires_action") {
             if (i > 0) {
-              await new Promise(resolve => setTimeout(resolve, 100)); // Sleep  0.1 sec
+              await new Promise(resolve => setTimeout(resolve, 1000)); // Sleep  1 sec
             }
             run = await client.beta.threads.runs.retrieve(thread.id, run.id);
             i++;
@@ -120,3 +120,4 @@ app.post('/submit', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
 });
+// correr: node app.js
