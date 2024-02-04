@@ -23,3 +23,5 @@ ORDER_ASSISTANT_NODE/package.json
 .vscode/
 ChatDev/ChatDev
 ChatDev/Test
+#MIXTRAL_8X7B/
+MIXTRAL_8X7B_TRAIN/
