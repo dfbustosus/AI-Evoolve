@@ -25,3 +25,11 @@ ChatDev/ChatDev
 ChatDev/Test
 #MIXTRAL_8X7B/
 MIXTRAL_8X7B_TRAIN/
+QUIVR/Quivr/.aws
+QUIVR/Quivr/.github
+QUIVR/Quivr/.vscode
+QUIVR/Quivr/.env
+QUIVR/Quivr/.env.example
+QUIVR/Quivr/.flake8
+QUIVR/Quivr/docs/
+QUIVR/Quivr/backend/**/__pycache__/
