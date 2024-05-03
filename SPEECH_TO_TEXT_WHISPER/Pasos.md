@@ -50,4 +50,21 @@ python -m pip install git+https://github.com/openai/whisper.git
 - `.vtt` es un archivo mas completo de tiempos y parrafos
 22. Si deseas transcribir de un idioma al ingles puedes usar lo siguiente:
 `whisper '.\LLAMA 2.mp3' --language Spanish --task translate`
+23. Otros ejemplo
+```bash
+whisper '.\audi.wav' --model tiny --task transcribe
+whisper '.\audi.wav' --model tiny --task transcribe --temperature 0 --initial_prompt 'Audi audi'
+
+whisper '.\audi.wav' --model base --task transcribe
+whisper '.\audi.wav' --model base --task transcribe --temperature 0 --initial_prompt 'Audi audi'
+
+whisper '.\audi.wav' --model small --task transcribe
+whisper '.\audi.wav' --model small --task transcribe --temperature 0 --initial_prompt 'Audi audi'
+
+whisper '.\audi.wav' --model medium --task transcribe
+whisper '.\audi.wav' --model medium --task transcribe --temperature 0 --initial_prompt 'Audi audi'
+
+whisper '.\audi.wav' --model large --task transcribe
+whisper '.\audi.wav' --model large --task transcribe --temperature 0 --initial_prompt 'Audi audi'
+```
 23. Fin!
