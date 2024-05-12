@@ -1,5 +1,5 @@
-# Fase 1: Interacci'on con Ollama
-1. Tener instalado ollama previamente [Ollama](URL)
+# Fase 1: Interacción con Ollama
+1. Tener instalado ollama previamente [Ollama](https://ollama.com/)
 2. Traer el modelo llama3
 ```bash
 ollama pull llama3
