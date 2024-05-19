@@ -1,0 +1,10 @@
+FROM ./capybarahermes-2.5-mistral-7b.Q4_K_M.gguf
+PARAMETER stop "<|im_start|>"
+PARAMETER stop "<|im_end|>"
+TEMPLATE """
+<|im_start|>system
+{{ .System }}<|im_end|>
+<|im_start|>user
+{{ .Prompt }}<|im_end|>
+<|im_start|>assistant
+"""
