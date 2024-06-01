@@ -1,0 +1,76 @@
+<html>
+ <head>
+  <style>
+   body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+   }
+   .container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+   }
+   h1 {
+    text-align: center;
+    font-size: 3em;
+    color: #333;
+   }
+   p {
+    line-height: 2em;
+    font-size: 1.5em;
+    color: #666;
+   }
+   .form-group {
+    margin-bottom: 20px;
+   }
+   label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+   }
+   input[type="text"],
+   textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+   }
+   textarea {
+    height: 200px;
+   }
+   button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+   }
+  </style>
+ </head>
+ <body>
+  <div class="container">
+   <h1>Beautiful and Nice Web UI</h1>
+   <p>Welcome to our web interface! We're excited to offer you a user-friendly experience with our cutting-edge design and many icons. Please fill out the form below and we'll get back to you shortly.</p>
+   <form id="myForm">
+    <div class="form-group">
+     <label for="name">Name:</label>
+     <input type="text" id="name" name="name" required />
+    </div>
+    <div class="form-group">
+     <label for="email">Email:</label>
+     <input type="email" id="email" name="email" required />
+    </div>
+    <div class="form-group">
+     <label for="message">Message:</label>
+     <textarea id="message" name="message"></textarea>
+    </div>
+    <button type="submit">Submit</button>
+   </form>
+  </div>
+ </body>
+</html>

@@ -3,8 +3,8 @@
 Es una muy buena herramienta pero ...
 
 1. Hay que pagar cerca de 10-12 USD al mes
-2. Tu código se puede filtrar f'acilmente
-3. La nueva herramienta de microsoft `recall` va a paermitir que puedan grabars tus pantallas
+2. Tu código se puede filtrar fácilmente
+3. La nueva herramienta de microsoft `recall` va a paermitir que puedan grabar tus pantallas
 4. Al final es buena opción pero existen otras opciones, ... La respuesta es sí
 
 # Benchmark de LLMs para código
@@ -13,7 +13,7 @@ Existen muchos benchmarks pero por ejemplo esta es uno bueno [EvalPlus](https://
 
 EvalPlus, un marco de evaluación de síntesis de código para evaluar rigurosamente la corrección funcional del código sintetizado por LLMs. EvalPlus complementa un conjunto de datos de evaluación con una gran cantidad de casos de prueba recién producidos por un generador automático de entradas de prueba. El [Paper](https://openreview.net/forum?id=1qvx610Cu7)
 
-Actualmente el benchmark muestra este ranking
+Actualmente el benchmark muestra este ranking:
 
 1. 🥇GPT-4-Turbo (April 2024) ✨ ⚡86.6
 2. 🥈GPT-4-Turbo (Nov 2023) ✨⚡81.7
