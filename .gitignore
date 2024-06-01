@@ -50,3 +50,4 @@ SPEECH_TO_TEXT_WHISPER/record*
 RAG LLAMA3/myenv/
 Ollama Models Make/capy*.gguf
 GROQ_FUNCTION_CALLING/
+L-CREW-AGENTS/
