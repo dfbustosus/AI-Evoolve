@@ -15,6 +15,8 @@ pipeline = ChronosPipeline.from_pretrained(
     device_map="cuda",  # "cpu" o "mps" para Apple Silicon
     torch_dtype=torch.bfloat16,
     #temperature=0.0,
+    #top_p=0.1,
+    #top_k=20,
 )
 
 ## STEP 2: LOAD DATA
