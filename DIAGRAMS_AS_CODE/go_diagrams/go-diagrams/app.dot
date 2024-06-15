@@ -1,0 +1,65 @@
+digraph root {
+	fontcolor="#2D3436";
+	fontname="Sans-Serif";
+	fontsize=13;
+	label=App;
+	nodesep=0.6;
+	pad=2;
+	rankdir=LR;
+	ranksep=0.75;
+	splines=ortho;
+	qssopfcx->astnnupe[ color="#7B8894", dir=forward, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13 ];
+	astnnupe->qfmpcesr[ color="#7B8894", dir=forward, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13 ];
+	astnnupe->lmmafaaz[ color="#7B8894", dir=forward, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13 ];
+	astnnupe->mjwwjart[ color="#7B8894", dir=forward, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13 ];
+	mjwwjart->vpcdlsll[ color="#7B8894", dir=forward, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13 ];
+	qfmpcesr->vpcdlsll[ color="#7B8894", dir=forward, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13 ];
+	lmmafaaz->vpcdlsll[ color="#7B8894", dir=forward, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13 ];
+	vpcdlsll->bljccqqa[ color="#7B8894", dir=forward, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13 ];
+	subgraph cluster_GCP {
+	bgcolor="#E5F5FD";
+	fontcolor="#2D3436";
+	fontname="Sans-Serif";
+	fontsize=12;
+	labeljust=l;
+	pencolor="#AEB6BE";
+	shape=box;
+	style=rounded;
+	subgraph clusterdata {
+	bgcolor="#EBF3E7";
+	fontcolor="#2D3436";
+	fontname="Sans-Serif";
+	fontsize=12;
+	label="Data Layer";
+	labeljust=l;
+	pencolor="#AEB6BE";
+	shape=box;
+	style=rounded;
+	bljccqqa [ fixedsize=true, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13, height=1.7999999999999998, image="assets/gcp/database/sql.png", imagescale=true, label=Database, labelloc=b, shape=none, style=rounded, width=1.4 ];
+	vpcdlsll [ fixedsize=true, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13, height=1.7999999999999998, image="assets/gcp/database/memorystore.png", imagescale=true, label=Cache, labelloc=b, shape=none, style=rounded, width=1.4 ];
+
+}
+;
+	subgraph clusterservices {
+	bgcolor="#EBF3E7";
+	fontcolor="#2D3436";
+	fontname="Sans-Serif";
+	fontsize=12;
+	label="Service Layer";
+	labeljust=l;
+	pencolor="#AEB6BE";
+	shape=box;
+	style=rounded;
+	lmmafaaz [ fixedsize=true, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13, height=1.7999999999999998, image="assets/gcp/compute/compute-engine.png", imagescale=true, label="Server 3", labelloc=b, shape=none, style=rounded, width=1.4 ];
+	mjwwjart [ fixedsize=true, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13, height=1.7999999999999998, image="assets/gcp/compute/compute-engine.png", imagescale=true, label="Server 1", labelloc=b, shape=none, style=rounded, width=1.4 ];
+	qfmpcesr [ fixedsize=true, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13, height=1.7999999999999998, image="assets/gcp/compute/compute-engine.png", imagescale=true, label="Server 2", labelloc=b, shape=none, style=rounded, width=1.4 ];
+
+}
+;
+
+}
+;
+	astnnupe [ fixedsize=true, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13, height=1.7999999999999998, image="assets/gcp/network/load-balancing.png", imagescale=true, label=NLB, labelloc=b, shape=none, style=rounded, width=1.4 ];
+	qssopfcx [ fixedsize=true, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13, height=1.7999999999999998, image="assets/gcp/network/dns.png", imagescale=true, label=DNS, labelloc=b, shape=none, style=rounded, width=1.4 ];
+
+}

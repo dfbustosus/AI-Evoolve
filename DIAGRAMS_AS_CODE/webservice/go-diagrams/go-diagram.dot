@@ -1,0 +1,70 @@
+digraph root {
+	fontcolor="#2D3436";
+	fontname="Sans-Serif";
+	fontsize=13;
+	label="Web Service";
+	nodesep=0.6;
+	pad=2;
+	rankdir=LR;
+	ranksep=0.75;
+	splines=ortho;
+	peenbglz->afcjwhia[ color="#7B8894", dir=forward, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13 ];
+	afcjwhia->etosxlqd[ color="#7B8894", dir=forward, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13 ];
+	afcjwhia->wxpprgll[ color="#7B8894", dir=forward, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13 ];
+	etosxlqd->mlqqvpcm[ color="#7B8894", dir=forward, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13 ];
+	wxpprgll->mlqqvpcm[ color="#7B8894", dir=forward, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13 ];
+	etosxlqd->oceentta[ color="#7B8894", dir=forward, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13 ];
+	wxpprgll->oceentta[ color="#7B8894", dir=forward, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13 ];
+	oceentta->tyqojdet[ color="#7B8894", dir=both, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13 ];
+	mlqqvpcm->nphoizpe[ color="#7B8894", dir=forward, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13 ];
+	mlqqvpcm->vihacpyi[ color="#7B8894", dir=forward, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13 ];
+	subgraph cluster_cache {
+	bgcolor="#E5F5FD";
+	fontcolor="#2D3436";
+	fontname="Sans-Serif";
+	fontsize=12;
+	label=Sessions;
+	labeljust=l;
+	pencolor="#AEB6BE";
+	shape=box;
+	style=rounded;
+	oceentta [ fixedsize=true, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13, height=1.7999999999999998, image="assets/apps/inmemory/redis.png", imagescale=true, label=session, labelloc=b, shape=none, style=rounded, width=1.4 ];
+	tyqojdet [ fixedsize=true, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13, height=1.7999999999999998, image="assets/apps/inmemory/redis.png", imagescale=true, label=replica, labelloc=b, shape=none, style=rounded, width=1.4 ];
+
+}
+;
+	subgraph cluster_database {
+	bgcolor="#E5F5FD";
+	fontcolor="#2D3436";
+	fontname="Sans-Serif";
+	fontsize=12;
+	label=Database;
+	labeljust=l;
+	pencolor="#AEB6BE";
+	shape=box;
+	style=rounded;
+	mlqqvpcm [ fixedsize=true, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13, height=1.7999999999999998, image="assets/apps/database/postgresql.png", imagescale=true, label="Master DB", labelloc=b, shape=none, style=rounded, width=1.4 ];
+	nphoizpe [ fixedsize=true, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13, height=1.7999999999999998, image="assets/apps/database/postgresql.png", imagescale=true, label="DB Replica 1", labelloc=b, shape=none, style=rounded, width=1.4 ];
+	vihacpyi [ fixedsize=true, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13, height=1.7999999999999998, image="assets/apps/database/postgresql.png", imagescale=true, label="DB Replica 2", labelloc=b, shape=none, style=rounded, width=1.4 ];
+
+}
+;
+	subgraph cluster_services {
+	bgcolor="#E5F5FD";
+	fontcolor="#2D3436";
+	fontname="Sans-Serif";
+	fontsize=12;
+	label=Services;
+	labeljust=l;
+	pencolor="#AEB6BE";
+	shape=box;
+	style=rounded;
+	etosxlqd [ fixedsize=true, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13, height=1.7999999999999998, image="assets/apps/container/docker.png", imagescale=true, label="Replica 1", labelloc=b, shape=none, style=rounded, width=1.4 ];
+	wxpprgll [ fixedsize=true, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13, height=1.7999999999999998, image="assets/apps/container/docker.png", imagescale=true, label="Replica 2", labelloc=b, shape=none, style=rounded, width=1.4 ];
+
+}
+;
+	afcjwhia [ fixedsize=true, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13, height=1.7999999999999998, image="assets/apps/network/caddy.png", imagescale=true, label=Caddy, labelloc=b, shape=none, style=rounded, width=1.4 ];
+	peenbglz [ fixedsize=true, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13, height=1.7999999999999998, image="assets/apps/network/internet.png", imagescale=true, label=Internet, labelloc=b, shape=none, style=rounded, width=1.4 ];
+
+}

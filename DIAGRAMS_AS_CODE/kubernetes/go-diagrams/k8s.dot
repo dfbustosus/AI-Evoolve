@@ -1,0 +1,30 @@
+digraph root {
+	fontcolor="#2D3436";
+	fontname="Sans-Serif";
+	fontsize=13;
+	label=Kubernetes;
+	nodesep=0.6;
+	pad=2;
+	rankdir=TB;
+	ranksep=0.75;
+	splines=ortho;
+	fazssjjf->livzjwlo[ color="#7B8894", dir=forward, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13 ];
+	livzjwlo->uwamznbg[ color="#7B8894", dir=forward, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13 ];
+	subgraph cluster_pods {
+	bgcolor="#E5F5FD";
+	fontcolor="#2D3436";
+	fontname="Sans-Serif";
+	fontsize=12;
+	label=Deployment;
+	labeljust=l;
+	pencolor="#AEB6BE";
+	shape=box;
+	style=rounded;
+	livzjwlo [ fixedsize=true, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13, height=2.1999999999999997, image="assets/k8s/network/svc.png", imagescale=true, label=http, labelloc=b, shape=none, style=rounded, width=1.4 ];
+	uwamznbg [ fixedsize=true, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13, height=1.7999999999999998, image="assets/k8s/compute/pod.png", imagescale=true, label="web server", labelloc=b, shape=none, style=rounded, width=1.4 ];
+
+}
+;
+	fazssjjf [ fixedsize=true, fontcolor="#2D3436", fontname="Sans-Serif", fontsize=13, height=1.7999999999999998, image="assets/k8s/network/ing.png", imagescale=true, label=nginx, labelloc=b, shape=none, style=rounded, width=1.4 ];
+
+}
