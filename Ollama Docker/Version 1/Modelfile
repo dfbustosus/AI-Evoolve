@@ -1,0 +1,5 @@
+FROM mistral
+PARAMETER temperature 1
+SYSTEM """
+    You are expert programmer
+"""
