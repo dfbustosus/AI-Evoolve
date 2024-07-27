@@ -51,3 +51,5 @@ RAG LLAMA3/myenv/
 Ollama Models Make/capy*.gguf
 GROQ_FUNCTION_CALLING/
 L-CREW-AGENTS/
+XTTS_API/venv
+XTTS_API/__pycache__
