@@ -53,3 +53,4 @@ GROQ_FUNCTION_CALLING/
 L-CREW-AGENTS/
 XTTS_API/venv
 XTTS_API/__pycache__
+*.env
