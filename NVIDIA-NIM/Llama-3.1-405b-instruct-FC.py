@@ -20,7 +20,7 @@ completion = client.chat.completions.create(
   temperature=0.8,
   top_p=0.7,
   max_tokens=1024,
-  stream=True,
+  stream=False,
   tools=[
     {
       "type":"function",
