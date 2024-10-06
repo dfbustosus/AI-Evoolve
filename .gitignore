@@ -54,3 +54,5 @@ L-CREW-AGENTS/
 XTTS_API/venv
 XTTS_API/__pycache__
 *.env
+GPT-PILOT/gpt-pilot/
+GPT-PILOT/env/
